@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none" role="img" aria-label="Solentra House">
+  <g>
+    <circle cx="40" cy="40" r="26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+    <circle cx="22" cy="58" r="7" fill="#A8C58F" />
+    <circle cx="58" cy="22" r="3.6" fill="#9AB8DC" />
+  </g>
+  <text
+    x="86"
+    y="40"
+    dominant-baseline="central"
+    font-family="Inter, system-ui, sans-serif"
+    font-size="28"
+    font-weight="500"
+    letter-spacing="-0.5"
+    fill="currentColor"
+  >
+    Solentra House
+  </text>
+</svg>
