@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { LogIn, UserPlus, LayoutDashboard, LogOut } from "lucide-react";
 import { MenuBar } from "./MenuBar";
+import { MobileMenu } from "./MobileMenu";
 import { NAV_ITEMS } from "@/lib/nav";
 import { siteConfig } from "@/lib/site";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
@@ -87,8 +88,8 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-4 z-50 flex justify-center px-4">
-      <div className="flex items-center gap-3 max-w-6xl w-full">
+    <header className="sticky top-3 sm:top-4 z-50 flex justify-center px-3 sm:px-4">
+      <div className="flex items-center gap-2 sm:gap-3 max-w-6xl w-full">
         <Link
           href="/"
           className="flex items-center gap-2 text-sm font-semibold tracking-tight text-white px-3 py-1.5 rounded-xl bg-white/10 backdrop-blur-xl border border-white/15 shadow-sm hover:bg-white/15 transition-colors"
@@ -98,29 +99,31 @@ export function Header() {
           <span className="hidden sm:inline">{siteConfig.name}</span>
         </Link>
 
-        <div className="flex-1 flex justify-center">
+        <div className="hidden md:flex flex-1 justify-center">
           <MenuBar items={NAV_ITEMS} activeItem={activeItem} onItemClick={onItemClick} />
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex-1 md:hidden" />
+
+        <div className="hidden md:flex items-center gap-2">
           {!authResolved ? null : isAuthed ? (
             <>
               <Link
                 href="/account"
                 aria-label="Account"
-                className="flex items-center justify-center gap-1.5 h-9 md:h-auto w-9 md:w-auto md:px-3 md:py-1.5 rounded-xl bg-white text-neutral-950 shadow-sm text-sm font-medium hover:bg-white/90 transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white text-neutral-950 shadow-sm text-sm font-medium hover:bg-white/90 transition-colors"
               >
-                <LayoutDashboard className="h-4 w-4 md:h-3.5 md:w-3.5" />
-                <span className="hidden md:inline">Account</span>
+                <LayoutDashboard className="h-3.5 w-3.5" />
+                <span>Account</span>
               </Link>
               <form action="/api/auth/logout" method="POST">
                 <button
                   type="submit"
                   aria-label="Sign out"
-                  className="flex items-center justify-center gap-1.5 h-9 md:h-auto w-9 md:w-auto md:px-3 md:py-1.5 rounded-xl bg-white/10 backdrop-blur-xl border border-white/15 shadow-sm text-sm font-medium text-white/85 hover:bg-white/15 transition-colors cursor-pointer"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 backdrop-blur-xl border border-white/15 shadow-sm text-sm font-medium text-white/85 hover:bg-white/15 transition-colors cursor-pointer"
                 >
-                  <LogOut className="h-4 w-4 md:h-3.5 md:w-3.5" />
-                  <span className="hidden md:inline">Sign out</span>
+                  <LogOut className="h-3.5 w-3.5" />
+                  <span>Sign out</span>
                 </button>
               </form>
             </>
@@ -129,22 +132,30 @@ export function Header() {
               <Link
                 href="/login"
                 aria-label="Log in"
-                className="flex items-center justify-center gap-1.5 h-9 md:h-auto w-9 md:w-auto md:px-3 md:py-1.5 rounded-xl bg-white/10 backdrop-blur-xl border border-white/15 shadow-sm text-sm font-medium text-white/85 hover:bg-white/15 transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 backdrop-blur-xl border border-white/15 shadow-sm text-sm font-medium text-white/85 hover:bg-white/15 transition-colors"
               >
-                <LogIn className="h-4 w-4 md:h-3.5 md:w-3.5" />
-                <span className="hidden md:inline">Log in</span>
+                <LogIn className="h-3.5 w-3.5" />
+                <span>Log in</span>
               </Link>
               <Link
                 href="/register"
                 aria-label="Register"
-                className="flex items-center justify-center gap-1.5 h-9 md:h-auto w-9 md:w-auto md:px-3 md:py-1.5 rounded-xl bg-white text-neutral-950 shadow-sm text-sm font-medium hover:bg-white/90 transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white text-neutral-950 shadow-sm text-sm font-medium hover:bg-white/90 transition-colors"
               >
-                <UserPlus className="h-4 w-4 md:h-3.5 md:w-3.5" />
-                <span className="hidden md:inline">Register</span>
+                <UserPlus className="h-3.5 w-3.5" />
+                <span>Register</span>
               </Link>
             </>
           )}
         </div>
+
+        <MobileMenu
+          items={NAV_ITEMS}
+          isAuthed={isAuthed}
+          authResolved={authResolved}
+          activeItem={activeItem}
+          onItemClick={onItemClick}
+        />
       </div>
     </header>
   );

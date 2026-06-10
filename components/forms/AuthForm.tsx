@@ -89,7 +89,7 @@ export function AuthForm({ mode }: AuthFormProps) {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-7">
+    <form onSubmit={onSubmit} className="space-y-5 sm:space-y-7">
       {mode === "register" && (
         <FloatingAuthInput
           id="auth_name"
