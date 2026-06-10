@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const vertexSource = `
   attribute vec4 a_position;
@@ -49,8 +49,25 @@ export function SmokeyBackground({ color = "#1A1A1A" }: { color?: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mousePosition = useRef({ x: 0, y: 0 });
   const isHovering = useRef(false);
+  const [shouldRender, setShouldRender] = useState(false);
 
   useEffect(() => {
+    const idle = (cb: () => void) => {
+      if (typeof window === "undefined") return cb();
+      const w = window as Window & {
+        requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+      };
+      if (typeof w.requestIdleCallback === "function") {
+        w.requestIdleCallback(cb, { timeout: 800 });
+      } else {
+        setTimeout(cb, 300);
+      }
+    };
+    idle(() => setShouldRender(true));
+  }, []);
+
+  useEffect(() => {
+    if (!shouldRender) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
     const gl = canvas.getContext("webgl");
@@ -137,12 +154,18 @@ export function SmokeyBackground({ color = "#1A1A1A" }: { color?: string }) {
       canvas.removeEventListener("mouseenter", onMouseEnter);
       canvas.removeEventListener("mouseleave", onMouseLeave);
     };
-  }, [color]);
+  }, [shouldRender, color]);
 
   return (
-    <div className="absolute inset-0 overflow-hidden">
-      <canvas ref={canvasRef} className="w-full h-full" />
-      <div className="absolute inset-0 backdrop-blur-sm bg-neutral-950/30" />
+    <div
+      className="absolute inset-0 overflow-hidden"
+      style={{
+        backgroundImage:
+          "radial-gradient(ellipse at 30% 20%, #1d2540 0%, #0a0a0a 55%), radial-gradient(ellipse at 70% 80%, #1a3030 0%, transparent 60%)",
+        backgroundColor: "#0a0a0a",
+      }}
+    >
+      {shouldRender && <canvas ref={canvasRef} className="w-full h-full" />}
     </div>
   );
 }
