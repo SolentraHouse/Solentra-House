@@ -21,9 +21,9 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-24 border-t border-white/10 bg-white/5 backdrop-blur-md">
+    <footer className="mt-16 sm:mt-24 border-t border-white/10 bg-white/5 backdrop-blur-md">
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-10 sm:py-12 md:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
           <div className="col-span-2">
             <Link href="/" aria-label={`${siteConfig.name} home`} className="inline-block text-white hover:opacity-90 transition-opacity">
               <LogoFull className="h-7 sm:h-8 w-auto" />

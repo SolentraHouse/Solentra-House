@@ -29,9 +29,9 @@ export function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-24"
+      className="max-w-6xl mx-auto px-4 md:px-8 py-14 sm:py-16 md:py-24"
     >
-      <header className="max-w-2xl mb-10 md:mb-14">
+      <header className="max-w-2xl mb-8 sm:mb-10 md:mb-14">
         <p className="text-xs font-mono uppercase tracking-widest text-indigo-300">
           Our approach
         </p>
@@ -48,7 +48,7 @@ export function HowItWorks() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.35, delay: idx * 0.05 }}
-            className="animated-border bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl p-6"
+            className="animated-border bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl p-5 sm:p-6"
           >
             <p className="text-xs font-mono text-white/40">{step.n}</p>
             <p className="mt-4 text-base font-semibold text-white">

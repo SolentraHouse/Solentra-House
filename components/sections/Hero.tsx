@@ -13,13 +13,13 @@ export function Hero({ onPrimaryCta, onSecondaryCta }: HeroProps) {
   return (
     <section
       id="hero"
-      className="max-w-5xl mx-auto px-6 pt-16 md:pt-28 pb-16 text-center"
+      className="max-w-5xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 md:pt-28 pb-12 sm:pb-16 text-center"
     >
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="text-4xl md:text-6xl font-semibold tracking-tight leading-[1.1] text-white mb-8 font-sans max-w-4xl mx-auto"
+        className="text-[2rem] sm:text-4xl md:text-6xl font-semibold tracking-tight leading-[1.1] text-white mb-6 sm:mb-8 font-sans max-w-4xl mx-auto"
       >
         {siteConfig.hero.headlineLine1}
         <br />
@@ -32,7 +32,7 @@ export function Hero({ onPrimaryCta, onSecondaryCta }: HeroProps) {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="text-lg text-white/75 leading-relaxed max-w-2xl mx-auto mb-10 font-normal"
+        className="text-base sm:text-lg text-white/75 leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10 font-normal"
       >
         {siteConfig.hero.subtitle}
       </motion.p>

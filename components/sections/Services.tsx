@@ -38,7 +38,7 @@ export function Services({ onBuyClick }: ServicesProps) {
                 key={srv.id}
                 onClick={() => setSelectedService(srv)}
                 className={cn(
-                  "animated-border w-full text-left p-5 rounded-2xl border transition-all duration-300 flex items-start gap-4 cursor-pointer backdrop-blur-md",
+                  "animated-border w-full text-left p-4 sm:p-5 rounded-2xl border transition-all duration-300 flex items-start gap-3 sm:gap-4 cursor-pointer backdrop-blur-md",
                   isActive
                     ? "bg-white/10 border-white/25"
                     : "bg-white/5 border-white/10 hover:bg-white/8",
@@ -46,7 +46,7 @@ export function Services({ onBuyClick }: ServicesProps) {
               >
                 <div
                   className={cn(
-                    "w-12 h-12 rounded-xl border bg-white bg-no-repeat shadow-sm shrink-0",
+                    "w-10 h-10 sm:w-12 sm:h-12 rounded-xl border bg-white bg-no-repeat shadow-sm shrink-0",
                     isActive ? "border-white/40 ring-2 ring-white/20" : "border-white/20",
                   )}
                   style={{
@@ -85,7 +85,7 @@ export function Services({ onBuyClick }: ServicesProps) {
           })}
         </div>
 
-        <div className="lg:col-span-7 lg:sticky lg:top-24 bg-white/8 backdrop-blur-md rounded-3xl border border-white/15 p-5 sm:p-6 md:p-8 min-h-[460px] flex flex-col justify-between">
+        <div className="lg:col-span-7 lg:sticky lg:top-24 bg-white/8 backdrop-blur-md rounded-3xl border border-white/15 p-4 sm:p-6 md:p-8 min-h-[420px] sm:min-h-[460px] flex flex-col justify-between">
           <div>
             <div className="flex flex-wrap items-center justify-between gap-2 mb-6">
               <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-blue-500/15 text-blue-300 border border-blue-400/30">
@@ -96,10 +96,10 @@ export function Services({ onBuyClick }: ServicesProps) {
               </span>
             </div>
 
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
-              <div className="flex items-start gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4 mb-4">
+              <div className="flex items-start gap-3 sm:gap-4">
                 <div
-                  className="w-16 h-16 rounded-2xl border border-white/20 bg-white bg-no-repeat shadow-sm shrink-0"
+                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl border border-white/20 bg-white bg-no-repeat shadow-sm shrink-0"
                   style={{
                     backgroundImage: `url(${ICON_SPRITE_URL})`,
                     backgroundSize: "300% 300%",
@@ -107,7 +107,7 @@ export function Services({ onBuyClick }: ServicesProps) {
                   }}
                   aria-hidden="true"
                 />
-                <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-white">
                   {selectedService.title}
                 </h3>
               </div>

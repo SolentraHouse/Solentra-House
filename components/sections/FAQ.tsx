@@ -45,9 +45,9 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24"
+      className="max-w-4xl mx-auto px-4 md:px-8 py-14 sm:py-16 md:py-24"
     >
-      <header className="mb-10 md:mb-14 text-center md:text-left">
+      <header className="mb-8 sm:mb-10 md:mb-14 text-center md:text-left">
         <p className="text-xs font-mono uppercase tracking-widest text-amber-300">
           FAQ
         </p>
@@ -67,7 +67,7 @@ export function FAQ() {
               <button
                 onClick={() => setOpenIdx(isOpen ? null : idx)}
                 aria-expanded={isOpen}
-                className="w-full px-5 md:px-6 py-4 flex items-center justify-between gap-3 text-left"
+                className="w-full px-4 sm:px-5 md:px-6 py-4 flex items-center justify-between gap-3 text-left"
               >
                 <span className="text-sm md:text-base font-medium text-white">
                   {item.q}
@@ -86,7 +86,7 @@ export function FAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.25 }}
                   >
-                    <p className="px-5 md:px-6 pb-5 text-sm text-white/70 leading-relaxed">
+                    <p className="px-4 sm:px-5 md:px-6 pb-5 text-sm text-white/70 leading-relaxed">
                       {item.a}
                     </p>
                   </motion.div>

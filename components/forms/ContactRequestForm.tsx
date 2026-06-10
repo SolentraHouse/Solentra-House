@@ -89,17 +89,17 @@ export function ContactRequestForm() {
   }
 
   return (
-    <div className="relative w-full overflow-hidden rounded-3xl border border-white/20 bg-white/12 backdrop-blur-xl p-7 md:p-8">
-      <div className="mb-7">
+    <div className="relative w-full overflow-hidden rounded-3xl border border-white/20 bg-white/12 backdrop-blur-xl p-5 sm:p-7 md:p-8">
+      <div className="mb-6 sm:mb-7">
         <span className="text-[10px] font-mono text-white/50 uppercase tracking-widest block mb-2">
           SEND A REQUEST
         </span>
-        <h3 className="text-2xl font-bold tracking-tight text-white">
+        <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
           Tell us what you need
         </h3>
       </div>
 
-      <form onSubmit={onSubmit} className="space-y-7">
+      <form onSubmit={onSubmit} className="space-y-6 sm:space-y-7">
         <input
           type="text"
           name="website"

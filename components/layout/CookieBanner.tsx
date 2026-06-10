@@ -73,7 +73,7 @@ export function CookieBanner() {
     >
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" aria-hidden="true" />
 
-      <div className="relative w-full max-w-lg bg-neutral-900/95 backdrop-blur-xl border border-white/15 rounded-3xl shadow-2xl p-6 md:p-8">
+      <div className="relative w-full max-w-lg bg-neutral-900/95 backdrop-blur-xl border border-white/15 rounded-3xl shadow-2xl p-5 sm:p-6 md:p-8">
         <div className="flex items-center gap-3 mb-1">
           <div className="h-9 w-9 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center">
             <Cookie className="h-4 w-4 text-white/85" />
@@ -119,7 +119,7 @@ export function CookieBanner() {
           </div>
         )}
 
-        <div className="mt-6 flex flex-col sm:flex-row gap-2">
+        <div className="mt-6 flex flex-col md:flex-row gap-2">
           {!customize ? (
             <>
               <button
