@@ -41,22 +41,22 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
   const email = user.email ?? "";
 
   return (
-    <section className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <section className="max-w-6xl mx-auto px-4 md:px-8 py-8 sm:py-12 md:py-16">
       <Link
         href="/#services"
-        className="inline-flex items-center gap-1.5 text-xs font-medium text-white/55 hover:text-white transition-colors mb-8"
+        className="inline-flex items-center gap-1.5 text-xs font-medium text-white/55 hover:text-white transition-colors mb-6 sm:mb-8"
       >
         <ArrowLeft className="h-3.5 w-3.5" />
         Back to services
       </Link>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
         <aside className="lg:col-span-5 space-y-6">
           <header>
             <p className="text-xs font-mono uppercase tracking-widest text-sky-300">
               Checkout
             </p>
-            <h1 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight">
+            <h1 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight">
               You are purchasing
             </h1>
           </header>

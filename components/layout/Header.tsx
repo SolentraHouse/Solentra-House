@@ -102,23 +102,25 @@ export function Header() {
           <MenuBar items={NAV_ITEMS} activeItem={activeItem} onItemClick={onItemClick} />
         </div>
 
-        <div className="hidden md:flex items-center gap-2">
+        <div className="flex items-center gap-2">
           {!authResolved ? null : isAuthed ? (
             <>
               <Link
                 href="/account"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white text-neutral-950 shadow-sm text-sm font-medium hover:bg-white/90 transition-colors"
+                aria-label="Account"
+                className="flex items-center justify-center gap-1.5 h-9 md:h-auto w-9 md:w-auto md:px-3 md:py-1.5 rounded-xl bg-white text-neutral-950 shadow-sm text-sm font-medium hover:bg-white/90 transition-colors"
               >
-                <LayoutDashboard className="h-3.5 w-3.5" />
-                Account
+                <LayoutDashboard className="h-4 w-4 md:h-3.5 md:w-3.5" />
+                <span className="hidden md:inline">Account</span>
               </Link>
               <form action="/api/auth/logout" method="POST">
                 <button
                   type="submit"
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 backdrop-blur-xl border border-white/15 shadow-sm text-sm font-medium text-white/85 hover:bg-white/15 transition-colors cursor-pointer"
+                  aria-label="Sign out"
+                  className="flex items-center justify-center gap-1.5 h-9 md:h-auto w-9 md:w-auto md:px-3 md:py-1.5 rounded-xl bg-white/10 backdrop-blur-xl border border-white/15 shadow-sm text-sm font-medium text-white/85 hover:bg-white/15 transition-colors cursor-pointer"
                 >
-                  <LogOut className="h-3.5 w-3.5" />
-                  Sign out
+                  <LogOut className="h-4 w-4 md:h-3.5 md:w-3.5" />
+                  <span className="hidden md:inline">Sign out</span>
                 </button>
               </form>
             </>
@@ -126,17 +128,19 @@ export function Header() {
             <>
               <Link
                 href="/login"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 backdrop-blur-xl border border-white/15 shadow-sm text-sm font-medium text-white/85 hover:bg-white/15 transition-colors"
+                aria-label="Log in"
+                className="flex items-center justify-center gap-1.5 h-9 md:h-auto w-9 md:w-auto md:px-3 md:py-1.5 rounded-xl bg-white/10 backdrop-blur-xl border border-white/15 shadow-sm text-sm font-medium text-white/85 hover:bg-white/15 transition-colors"
               >
-                <LogIn className="h-3.5 w-3.5" />
-                Log in
+                <LogIn className="h-4 w-4 md:h-3.5 md:w-3.5" />
+                <span className="hidden md:inline">Log in</span>
               </Link>
               <Link
                 href="/register"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white text-neutral-950 shadow-sm text-sm font-medium hover:bg-white/90 transition-colors"
+                aria-label="Register"
+                className="flex items-center justify-center gap-1.5 h-9 md:h-auto w-9 md:w-auto md:px-3 md:py-1.5 rounded-xl bg-white text-neutral-950 shadow-sm text-sm font-medium hover:bg-white/90 transition-colors"
               >
-                <UserPlus className="h-3.5 w-3.5" />
-                Register
+                <UserPlus className="h-4 w-4 md:h-3.5 md:w-3.5" />
+                <span className="hidden md:inline">Register</span>
               </Link>
             </>
           )}

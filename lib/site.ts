@@ -13,12 +13,16 @@ export const siteConfig = {
     secondaryCta: "Explore Services",
   },
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://solentrahouse.xyz",
+  // Public-facing contact emails shown on the site (Footer, Contact section,
+  // legal documents). These always use the @solentrahouse.xyz domain.
+  // For internal routing (where contact form notifications are delivered) the
+  // dedicated env var CONTACT_TO_EMAIL is used inside /api/contact only.
   contact: {
-    support: process.env.CONTACT_TO_EMAIL || "support@solentrahouse.xyz",
+    support: "support@solentrahouse.xyz",
     business: "business@solentrahouse.xyz",
     legal: "legal@solentrahouse.xyz",
     billing: "billing@solentrahouse.xyz",
-    phone: "+44 20 *** ****",
+    phone: "+44 7916 685 492",
   },
   address: {
     line1: "71-75 Shelton Street",

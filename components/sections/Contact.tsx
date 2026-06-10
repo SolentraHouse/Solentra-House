@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, ShieldCheck } from "lucide-react";
+import { Mail, Phone, ShieldCheck } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import { ContactRequestForm } from "@/components/forms/ContactRequestForm";
 
@@ -15,7 +15,7 @@ export function Contact() {
           <span className="text-xs font-mono text-white/40 tracking-widest uppercase block mb-2">
             CONTACT
           </span>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight mb-4">
             Talk to a Partner
           </h2>
           <p className="text-sm text-white/65 leading-relaxed mb-6">
@@ -35,6 +35,13 @@ export function Contact() {
             >
               <Mail className="h-4 w-4 text-blue-300" />
               {siteConfig.contact.business}
+            </a>
+            <a
+              href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
+              className="flex items-center gap-3 text-white/80 hover:text-white transition-colors"
+            >
+              <Phone className="h-4 w-4 text-amber-300" />
+              {siteConfig.contact.phone}
             </a>
             <div className="flex items-center gap-3 text-white/80">
               <ShieldCheck className="h-4 w-4 text-blue-300" />

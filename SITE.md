@@ -22,7 +22,7 @@
 - Registration number: [REGISTRATION_NUMBER — PENDING — required before launch, user approved]
 - Registered address: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom
 - Public address: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom
-- Phone: +44 20 *** **** [PHONE — PENDING — real number before launch, partial masking approved]
+- Phone: +44 7916 685 492
 - Contact emails:
   - support@solentrahouse.xyz — client questions, support
   - business@solentrahouse.xyz — partners, collaboration

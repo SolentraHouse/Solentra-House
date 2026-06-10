@@ -21,10 +21,10 @@
 - Public address: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom
 - Phone number: +44 20 *** **** [PHONE — PENDING — real number to be added before launch, user approved partial masking]
 - Contact emails:
-  - support@[DOMAIN] — client questions, support
-  - business@[DOMAIN] — partners, collaboration
-  - legal@[DOMAIN] — legal questions, GDPR requests
-  - billing@[DOMAIN] — payment questions
+  - support@solentrahouse.xyz — client questions, support
+  - business@solentrahouse.xyz — partners, collaboration
+  - legal@solentrahouse.xyz — legal questions, GDPR requests
+  - billing@solentrahouse.xyz — payment questions
   - Note: [DOMAIN] resolves once Section 1 domain is confirmed
 - Social media links:
   - Twitter/X — planned, URL [PENDING — to be added when account is created]
@@ -285,7 +285,7 @@ Contact form:
 - Required: yes
 - Location: Contact section on landing page
 - Fields: name, email, company (optional), message
-- Destination email: support@[DOMAIN] (via CONTACT_TO_EMAIL env var)
+- Destination email: support@solentrahouse.xyz (via CONTACT_TO_EMAIL env var)
 - Captcha required: yes (Cloudflare Turnstile per BUILD-RULES default)
 - Consent checkbox required: yes (GDPR processing consent)
 
@@ -352,7 +352,7 @@ Service/payment request forms:
 - Serves EU customers/users: yes (target audience = European markets)
 - Serves UK customers/users: yes
 - Serves US customers/users: not primary, but reachable via Gumroad — handle via standard Privacy Policy clauses without dedicated CCPA section unless brief later adds US focus
-- Legal contact email: legal@[DOMAIN]
+- Legal contact email: legal@solentrahouse.xyz
 - DPO email or N/A: N/A — DPO not required for a small agency without large-scale special category data processing (per UK GDPR criteria)
 - Privacy Policy required: yes
 - Cookie Policy required: yes

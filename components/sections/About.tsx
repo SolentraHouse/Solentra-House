@@ -34,7 +34,7 @@ export function About() {
           <p className="text-xs font-mono uppercase tracking-widest text-indigo-300">
             About {siteConfig.name}
           </p>
-          <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight">
+          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight">
             We work in 90-day windows, not 12-month retainers.
           </h2>
           <p className="mt-5 text-base text-white/70 leading-relaxed">

@@ -51,7 +51,7 @@ export function FAQ() {
         <p className="text-xs font-mono uppercase tracking-widest text-amber-300">
           FAQ
         </p>
-        <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight">
+        <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight">
           Questions we hear most often.
         </h2>
       </header>

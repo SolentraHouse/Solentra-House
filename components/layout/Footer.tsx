@@ -22,11 +22,11 @@ export function Footer() {
 
   return (
     <footer className="mt-24 border-t border-white/10 bg-white/5 backdrop-blur-md">
-      <div className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-          <div className="md:col-span-2">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 py-10 sm:py-12 md:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+          <div className="col-span-2">
             <Link href="/" aria-label={`${siteConfig.name} home`} className="inline-block text-white hover:opacity-90 transition-opacity">
-              <LogoFull className="h-8 w-auto" />
+              <LogoFull className="h-7 sm:h-8 w-auto" />
             </Link>
             <p className="mt-4 text-sm text-white/60 leading-relaxed max-w-md">
               {siteConfig.description}
@@ -77,7 +77,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row gap-4 justify-between items-start md:items-center text-xs text-white/50">
+        <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 flex flex-col md:flex-row gap-4 justify-between items-start md:items-center text-xs text-white/50">
           <div className="space-y-1">
             <p>
               &copy; {year} {siteConfig.legalName}. All rights reserved.
@@ -94,7 +94,7 @@ export function Footer() {
             <p>
               Legal: <a className="hover:text-white" href={`mailto:${siteConfig.contact.legal}`}>{siteConfig.contact.legal}</a>
             </p>
-            <p>Phone: {siteConfig.contact.phone}</p>
+            <p>Phone: <a className="hover:text-white" href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}>{siteConfig.contact.phone}</a></p>
           </div>
         </div>
       </div>

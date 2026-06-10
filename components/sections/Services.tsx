@@ -18,18 +18,18 @@ export function Services({ onBuyClick }: ServicesProps) {
   return (
     <section
       id="services"
-      className="max-w-7xl mx-auto px-6 py-20 border-t border-white/10"
+      className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 border-t border-white/10"
     >
-      <div className="mb-12">
+      <div className="mb-10 sm:mb-12">
         <span className="text-xs font-mono text-white/40 tracking-widest uppercase block mb-2">
           SERVICES
         </span>
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-white">
           Nine services, scoped and priced upfront.
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-start">
         <div className="lg:col-span-5 flex flex-col gap-3 lg:h-[760px] lg:overflow-y-auto lg:pr-2">
           {SERVICES.map((srv) => {
             const isActive = selectedService.id === srv.id;
@@ -85,7 +85,7 @@ export function Services({ onBuyClick }: ServicesProps) {
           })}
         </div>
 
-        <div className="lg:col-span-7 bg-white/8 backdrop-blur-md rounded-3xl border border-white/15 p-6 sm:p-8 min-h-[460px] flex flex-col justify-between">
+        <div className="lg:col-span-7 lg:sticky lg:top-24 bg-white/8 backdrop-blur-md rounded-3xl border border-white/15 p-5 sm:p-6 md:p-8 min-h-[460px] flex flex-col justify-between">
           <div>
             <div className="flex flex-wrap items-center justify-between gap-2 mb-6">
               <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-blue-500/15 text-blue-300 border border-blue-400/30">
@@ -107,12 +107,12 @@ export function Services({ onBuyClick }: ServicesProps) {
                   }}
                   aria-hidden="true"
                 />
-                <h3 className="text-2xl font-bold tracking-tight text-white">
+                <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
                   {selectedService.title}
                 </h3>
               </div>
               <div className="shrink-0 text-left sm:text-right">
-                <span className="block text-2xl font-mono font-bold text-white">
+                <span className="block text-xl sm:text-2xl font-mono font-bold text-white">
                   {selectedService.price}
                 </span>
                 <span className="block text-[11px] font-mono text-white/50 mt-1">

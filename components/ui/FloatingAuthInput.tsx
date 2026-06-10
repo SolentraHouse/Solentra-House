@@ -44,14 +44,14 @@ export function FloatingAuthInput({
         defaultValue={defaultValue}
         readOnly={readOnly}
         className={cn(
-          "block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-white/35 appearance-none focus:outline-none focus:ring-0 focus:border-emerald-300 peer",
+          "block py-2.5 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-white/35 appearance-none focus:outline-none focus:ring-0 focus:border-emerald-300 peer",
           readOnly && "cursor-not-allowed text-white/70",
         )}
         placeholder=" "
       />
       <label
         htmlFor={id}
-        className="absolute text-sm text-white/60 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-emerald-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+        className="absolute text-base text-white/60 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-emerald-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
       >
         <Icon className="inline-block mr-2 -mt-1" size={16} />
         {label}

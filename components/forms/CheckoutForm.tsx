@@ -104,7 +104,7 @@ export function CheckoutForm({ service, initialName, initialEmail }: CheckoutFor
             id="checkout_notes"
             name="notes"
             rows={3}
-            className="w-full rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-emerald-300 focus:outline-none focus:ring-0 resize-none"
+            className="w-full rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-base text-white placeholder:text-white/30 focus:border-emerald-300 focus:outline-none focus:ring-0 resize-none"
             placeholder="Context, deadlines, or specific focus..."
           />
         </div>

@@ -49,12 +49,12 @@ export default async function AccountPage() {
   const purchaseCount = purchases.length;
 
   return (
-    <section className="max-w-5xl mx-auto px-4 md:px-8 py-16 md:py-20">
-      <header className="mb-10">
+    <section className="max-w-5xl mx-auto px-4 md:px-8 py-12 sm:py-16 md:py-20">
+      <header className="mb-8 sm:mb-10">
         <p className="text-xs font-mono uppercase tracking-widest text-sky-300">
           Account
         </p>
-        <h1 className="mt-2 text-3xl md:text-4xl font-semibold tracking-tight text-white">
+        <h1 className="mt-2 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-white">
           Welcome back
         </h1>
         <p className="mt-2 text-sm text-white/55">
@@ -62,7 +62,7 @@ export default async function AccountPage() {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
         <DashCard icon={LayoutDashboard} title="Overview" accent="text-slate-300">
           <p className="text-sm text-white/80">{fullName}</p>
           <p className="text-xs text-white/55">{email}</p>
@@ -99,7 +99,7 @@ export default async function AccountPage() {
           </Link>
         </DashCard>
 
-        <DashCard icon={CreditCard} title="Billing" accent="text-amber-300" className="lg:col-span-2">
+        <DashCard icon={CreditCard} title="Billing" accent="text-amber-300" className="sm:col-span-2 lg:col-span-2">
           <p className="text-xs text-white/55">
             Purchase history is synced from Gumroad after each completed transaction.
           </p>

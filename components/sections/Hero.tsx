@@ -41,11 +41,11 @@ export function Hero({ onPrimaryCta, onSecondaryCta }: HeroProps) {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="flex flex-col sm:flex-row items-center justify-center gap-4"
+        className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-md sm:max-w-none mx-auto"
       >
         <button
           onClick={onPrimaryCta}
-          className="group px-8 py-4 bg-white text-neutral-950 rounded-full font-medium text-sm hover:scale-[1.02] active:scale-[0.98] transition-transform shadow-xl shadow-black/30 flex items-center justify-center gap-2 cursor-pointer"
+          className="group px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-neutral-950 rounded-full font-medium text-sm hover:scale-[1.02] active:scale-[0.98] transition-transform shadow-xl shadow-black/30 flex items-center justify-center gap-2 cursor-pointer"
         >
           <span>{siteConfig.hero.primaryCta}</span>
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -53,7 +53,7 @@ export function Hero({ onPrimaryCta, onSecondaryCta }: HeroProps) {
 
         <button
           onClick={onSecondaryCta}
-          className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full font-medium text-sm hover:bg-white/15 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+          className="px-6 sm:px-8 py-3.5 sm:py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full font-medium text-sm hover:bg-white/15 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
         >
           <span>{siteConfig.hero.secondaryCta}</span>
         </button>

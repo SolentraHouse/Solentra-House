@@ -128,7 +128,7 @@
 ### Business data (replace placeholders)
 
 - [ ] **Company registration number** (UK Companies House) → replace `[REGISTRATION_NUMBER - PENDING]` in `lib/site.ts`
-- [ ] **Real phone number** → replace `+44 20 *** ****` in `lib/site.ts`
+- [x] **Real phone number** (+44 7916 685 492) added to `lib/site.ts`
 - [ ] **Twitter/X URL** (when account created) → update `siteConfig.social.twitter`
 - [ ] **UK business bank IBAN** (needed for Custom Consultation IBAN flow)
 
