@@ -11,29 +11,34 @@ export const metadata: Metadata = pageMetadata({
 
 const DOCS = [
   {
+    title: "Terms of Service",
+    href: "/legal/terms",
+    description:
+      "Contract between you and Solentra House: services, payment terms, refunds, sanctions, liability, governing law.",
+  },
+  {
     title: "Privacy Policy",
     href: "/legal/privacy",
-    description: "What data we collect, why, how long we keep it, and your rights.",
+    description:
+      "Categories of personal data, lawful bases, processors, retention periods, security measures, and your rights.",
   },
   {
     title: "Cookie Policy",
     href: "/legal/cookies",
-    description: "Which cookies the site uses and how to control them.",
+    description:
+      "Cookies and similar technologies, their purpose and duration, and how to change your consent at any time.",
   },
   {
     title: "GDPR Policy",
     href: "/legal/gdpr",
-    description: "How to exercise your rights under UK and EU GDPR.",
-  },
-  {
-    title: "Terms of Service",
-    href: "/legal/terms",
-    description: "The contractual relationship between you and Solentra House.",
+    description:
+      "Your rights under UK and EU GDPR, our lawful bases at a glance, and how to file a request or complaint.",
   },
   {
     title: "Refund Policy",
     href: "/legal/refunds",
-    description: "Conditions for refunds on services purchased through the site.",
+    description:
+      "Conditions for full and partial refunds, the EU 14-day withdrawal right, chargebacks, and the appeals process.",
   },
 ];
 
@@ -48,7 +53,7 @@ export default function LegalIndexPage() {
           Legal documentation
         </h1>
         <p className="mt-3 text-sm text-white/55">
-          All five documents below apply to your use of this site and our services.
+          The five documents below govern your use of this site and our services. They are written in plain English and updated whenever our processing or service offering changes.
         </p>
       </header>
 
