@@ -139,9 +139,12 @@ export default function PrivacyPage() {
       </p>
       <ul>
         <li>TLS 1.2 or higher for all data in transit between your browser, our site, and our processors.</li>
-        <li>Encryption at rest for the account and engagement database (managed by Supabase).</li>
+        <li>Encryption at rest for the account and engagement database (managed by Supabase under their AWS-region infrastructure).</li>
         <li>Row-Level Security policies that restrict each authenticated user to their own records.</li>
-        <li>Password hashing using a strong, salted, slow algorithm; passwords are never stored or transmitted in plain text.</li>
+        <li>
+          Authentication is provided by Supabase. Passwords are hashed using bcrypt with a per-user salt by Supabase&apos;s authentication service; plain-text passwords are never accessible to Solentra House.
+        </li>
+        <li>Card data is never stored or processed by us. All payment card data is handled by Gumroad (PCI DSS Level 1) or by the receiving bank for SEPA / wire-transfer invoices.</li>
         <li>Principle of least privilege for staff and contractor access, reviewed periodically.</li>
         <li>Captcha and rate limiting on public forms to deter automated abuse.</li>
         <li>Backups and disaster recovery handled by our hosting and database processors under their own controls.</li>

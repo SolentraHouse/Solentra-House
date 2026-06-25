@@ -67,10 +67,13 @@ export default function TermsPage() {
 
       <h2>4. Eligibility and account registration</h2>
       <p>
-        The site is intended for users aged 18 or over, acting on behalf of a business, founder, or marketing team. By registering an account you confirm that the information you provide is accurate, that you are authorised to bind the entity you represent, and that your use complies with applicable law in your jurisdiction.
+        The site and our Services are open to users aged 18 or over. You may purchase either as a private individual (consumer) or on behalf of a business, partnership, or other organisation. If you purchase on behalf of an organisation, you confirm that you are authorised to bind that organisation to these Terms.
       </p>
       <p>
-        You are responsible for keeping your account credentials confidential. Notify us at {siteConfig.contact.support} if you suspect unauthorised access.
+        By registering an account you confirm that the information you provide is accurate and that your use of the site complies with applicable law in your jurisdiction. You are responsible for keeping your account credentials confidential. Notify us at {siteConfig.contact.support} if you suspect unauthorised access.
+      </p>
+      <p>
+        Where a clause in these Terms refers to obligations on consumers and on businesses differently (for example, the right of withdrawal in section 8 and the late-payment provisions in section 6), the applicable wording follows the capacity in which you purchased the Service.
       </p>
 
       <h2>5. Services</h2>
@@ -84,7 +87,10 @@ export default function TermsPage() {
       <h2>6. Payment terms</h2>
       <ul>
         <li>
-          <strong>Currency:</strong> Fixed-price packages are charged in EUR through Gumroad. Custom Digital Consultation engagements may be invoiced in EUR or GBP by SEPA / wire transfer, as set out in the written proposal.
+          <strong>Accepted buyers:</strong> Services are available to both consumers and businesses, subject to section 4 (Eligibility) and section 10 (Restricted jurisdictions).
+        </li>
+        <li>
+          <strong>Currency:</strong> Fixed-price packages are charged in EUR through Gumroad. Custom Digital Consultation engagements may be invoiced in EUR or GBP by SEPA or wire transfer, as set out in the written proposal.
         </li>
         <li>
           <strong>Taxes:</strong> Prices shown are exclusive of any value added tax (VAT) or equivalent indirect taxes. Where VAT becomes chargeable, it will be added at the prevailing rate and shown on the invoice or order receipt.
@@ -96,7 +102,10 @@ export default function TermsPage() {
           <strong>Merchant of record:</strong> Gumroad, Inc. acts as the merchant of record for fixed-price purchases. By completing a Gumroad checkout you also accept Gumroad&apos;s terms of service.
         </li>
         <li>
-          <strong>Late payment:</strong> Invoices not paid within 30 days of the invoice date accrue statutory interest under the Late Payment of Commercial Debts (Interest) Act 1998.
+          <strong>Card data and PCI DSS:</strong> Solentra House does not store, process, or transmit cardholder data. All payment card data is collected and processed by Gumroad, a PCI DSS Level 1 compliant service provider, or by the recipient bank for SEPA/wire-transfer invoices. We never see your full card number, CVV, or PIN.
+        </li>
+        <li>
+          <strong>Late payment (business buyers only):</strong> For business-to-business engagements, invoices not paid within 30 days of the invoice date accrue statutory interest under the Late Payment of Commercial Debts (Interest) Act 1998. Consumer purchases are not subject to that Act; statutory consumer protections continue to apply.
         </li>
       </ul>
 
@@ -133,13 +142,13 @@ export default function TermsPage() {
         <li>Attempt to gain unauthorised access to the site, our systems, or other users&apos; accounts.</li>
         <li>Scrape, reverse engineer, decompile, or copy site content for republication or commercial resale.</li>
         <li>Disrupt the site through automated requests, denial-of-service attacks, or malicious code.</li>
-        <li>Use Deliverables outside the entity that purchased the Engagement without our prior written consent.</li>
+        <li>Use Deliverables outside you (if you purchased as an individual) or the organisation that purchased the Engagement, without our prior written consent.</li>
       </ul>
 
       <h2>12. Intellectual property</h2>
       <p>
         The site, its design, code, brand assets, and content are owned by{" "}
-        {siteConfig.legalName} or our licensors. Subject to payment in full, we grant you a non-exclusive, non-transferable licence to use each Deliverable for the internal business purposes of the entity that purchased the Engagement, in perpetuity. We retain ownership of the underlying methodologies, frameworks, templates, and know-how used to produce the Deliverable.
+        {siteConfig.legalName} or our licensors. Subject to payment in full, we grant you a non-exclusive, non-transferable, perpetual licence to use each Deliverable for your own internal or business purposes (or, if you purchased as an individual, your personal professional activities). We retain ownership of the underlying methodologies, frameworks, templates, and know-how used to produce the Deliverable.
       </p>
 
       <h2>13. Confidentiality</h2>
@@ -153,13 +162,16 @@ export default function TermsPage() {
       </p>
       <ul>
         <li>
-          Our aggregate liability for any Engagement, whether in contract, tort (including negligence), or otherwise, is limited to the total fees paid by you for that Engagement in the twelve (12) months preceding the event giving rise to the claim.
+          Our aggregate liability for any Engagement, whether in contract, tort (including negligence), or otherwise, is limited to the total fees actually paid by you for that Engagement.
         </li>
         <li>
           We are not liable for indirect, incidental, special, or consequential loss, loss of profit, loss of revenue, loss of business opportunity, loss of goodwill, or loss of data.
         </li>
         <li>
-          Nothing in these Terms limits liability for death or personal injury caused by negligence, for fraud, or for any other liability that cannot be excluded under applicable law.
+          Nothing in these Terms limits liability for death or personal injury caused by negligence, for fraud, fraudulent misrepresentation, or for any other liability that cannot be excluded under applicable law.
+        </li>
+        <li>
+          <strong>If you purchase as a consumer:</strong> nothing in these Terms limits or excludes your statutory rights under the UK Consumer Rights Act 2015, the UK Consumer Contracts Regulations 2013, or equivalent consumer-protection law in your country of residence. Where any provision is found to conflict with those statutory rights, the statutory right prevails.
         </li>
       </ul>
 
