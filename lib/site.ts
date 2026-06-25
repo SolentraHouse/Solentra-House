@@ -32,7 +32,7 @@ export const siteConfig = {
     country: "United Kingdom",
   },
   registration: {
-    number: "[REGISTRATION_NUMBER - PENDING]",
+    number: "17289559",
     jurisdiction: "United Kingdom (England and Wales)",
   },
   legal: {
