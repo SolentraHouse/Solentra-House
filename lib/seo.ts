@@ -42,6 +42,9 @@ export function pageMetadata({
 }
 
 export function organizationSchema() {
+  const sameAs = [siteConfig.social.twitter].filter(
+    (v): v is string => typeof v === "string" && v.length > 0,
+  );
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -62,5 +65,6 @@ export function organizationSchema() {
       email: siteConfig.contact.support,
       telephone: siteConfig.contact.phone,
     },
+    ...(sameAs.length > 0 ? { sameAs } : {}),
   };
 }

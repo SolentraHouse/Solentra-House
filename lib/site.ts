@@ -42,7 +42,7 @@ export const siteConfig = {
     dpoEmail: null as string | null,
   },
   social: {
-    twitter: null as string | null,
+    twitter: "https://x.com/solentrahous_l" as string | null,
   },
 } as const;
 

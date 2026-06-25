@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Twitter } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import { LogoFull } from "@/components/ui/Logo";
 
@@ -38,6 +39,19 @@ export function Footer() {
               <br />
               {siteConfig.address.country}
             </address>
+            {siteConfig.social.twitter && (
+              <div className="mt-5 flex items-center gap-2">
+                <a
+                  href={siteConfig.social.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${siteConfig.name} on X`}
+                  className="h-9 w-9 flex items-center justify-center rounded-xl bg-white/10 border border-white/15 text-white/85 hover:bg-white/15 hover:text-white transition-colors"
+                >
+                  <Twitter className="h-4 w-4" />
+                </a>
+              </div>
+            )}
           </div>
 
           <div>
